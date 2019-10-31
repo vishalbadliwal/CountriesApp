@@ -1,0 +1,16 @@
+.box {
+  background-color: rgb(222, 240, 238);
+  margin: 2%;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 95%;
+  height: 50%;
+    
+}
+.back_img{
+  background-image: url(http://www.pngmart.com/files/3/World-Map-PNG-Photos.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

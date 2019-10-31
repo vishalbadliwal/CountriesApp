@@ -1,0 +1,20 @@
+
+.img_size{
+    background-image: url(https://s3.envato.com/files/151a5652-d0e6-43de-9696-7ea1864139e0/inline_image_preview.jpg);
+    min-height: 60%;
+    background-position: center;  
+}
+.img_style{
+    min-height: 350px;
+    background-attachment: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-origin: border-box;
+}
+.text_colour{
+    background-color: khaki;
+    font-size: 150%;
+}

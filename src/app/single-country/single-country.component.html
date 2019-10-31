@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row" style="text-align:center">
+    <div class="col" *ngFor='let country of countryData'>
+      <div class="img_size">
+        <div class="img_style" [ngStyle]="{ 'background-image': 'url(' + country.flag + ')'}">
+          <b class="text_colour">{{country.name}}({{country.nativeName}})</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="col-md-12" *ngFor='let country of countryData'>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text"><b>CAPITAL : </b>{{country.capital}}</p>
+            <p class="card-text"><b>Population : </b>{{country.population}}</p>
+            <p class="card-text"><b>Area : </b>{{country.area}}</p>
+            <p class="card-text"><b>Region : </b>{{country.region}}</p>
+            <p class="card-text"><b>Subregion : </b>{{country.subregion}}</p>
+            <p class="card-text"><b>Demonym : </b>{{country.demonym}}</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text"><b>Currency : </b> <span style="color: blue;"
+                *ngFor="let currency of country.currencies ; let last=last "
+                [routerLink]="['/currencyFilter',currency.code]">{{currency.name}}({{currency.code}})({{currency.symbol}}){{last?'':', '}}</span>
+            </p>
+            <p class="card-text"><b>Language : </b> <span style="color: blue;"
+                *ngFor="let language of country.languages ; let last=last "
+                [routerLink]="['/languageFilter',language.iso639_1]">{{language.name}}({{language.iso639_1}}){{last?'':', '}}</span>
+            </p>
+            <p class="card-text"><b>AltSpellings : </b>{{country.altSpellings}}</p>
+            <p class="card-text"><b>Borders : </b>{{country.borders}}</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text"><b>Timezone : </b>{{country.timezones}}</p>
+            <p class="card-text"><b>Gini : </b>{{country.gini}}</p>
+            <p class="card-text"><b>CallingCode : </b>{{country.callingCodes}}</p>
+            <p class="card-text"><b>NumericCode: </b>{{country.numericCode}}</p>
+            <p class="card-text"><b>Alpha3Code : </b>{{country.alpha3Code}}</p>
+            <p class="card-text"><b>Latitude,Longitude : </b>{{country.latlng}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
